@@ -4,11 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>donation</title>
+    <link rel="stylesheet" href="style/styles.css">
 </head>
 <body>
     
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Blog</a></li>
+                <li class="balance">5500 BDT</li>
+            </ul>
+        </nav>
+        <h1>Donate Bangladesh</h1>
+    </header>
+
+    <main>
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('donation')">Donation</button>
+            <button class="tab" onclick="switchTab('history')">History</button>
+        </div>
+
+        <div id="donation-section" class="tab-content active">
+            <div class="donation-card">
+                <img src="noakhali-flood.jpg" alt="Flood Relief in Noakhali">
+                <div class="card-content">
+                    <h2>Donate for Flood at Noakhali, Bangladesh</h2>
+                    <p>The recent floods in Noakhali have caused significant damage to homes and infrastructure...</p>
+                    <div class="donation-amount">
+                        <label for="noakhali-amount">Write Donation Amount</label>
+                        <input type="number" id="noakhali-amount" placeholder="0 BDT">
+                    </div>
+                    <button onclick="donate('noakhali-amount')">Donate Now</button>
+                </div>
+            </div>
+
+            <div class="donation-card">
+                <img src="feni-flood.jpg" alt="Flood Relief in Feni">
+                <div class="card-content">
+                    <h2>Donate for Flood Relief in Feni, Bangladesh</h2>
+                    <p>The recent floods in Feni have devastated local communities...</p>
+                    <div class="donation-amount">
+                        <label for="feni-amount">Write Donation Amount</label>
+                        <input type="number" id="feni-amount" placeholder="600 BDT">
+                    </div>
+                    <button onclick="donate('feni-amount')">Donate Now</button>
+                </div>
+            </div>
+
+            <div class="donation-card">
+                <img src="quota-movement.jpg" alt="Aid for Injured in Quota Movement">
+                <div class="card-content">
+                    <h2>Aid for Injured in the Quota Movement</h2>
+                    <p>The recent Quota movement has resulted in numerous injuries...</p>
+                    <div class="donation-amount">
+                        <label for="quota-amount">Write Donation Amount</label>
+                        <input type="number" id="quota-amount" placeholder="2400 BDT">
+                    </div>
+                    <button onclick="donate('quota-amount')">Donate Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="history-section" class="tab-content">
+            <p>Your donation history will appear here.</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
 
 
-    
 </body>
 </html>
